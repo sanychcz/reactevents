@@ -12,7 +12,7 @@
   deleteEvent: (event) ->
     index = @state.events.indexOf event
     events = React.addons.update(@state.events, { $splice: [[index, 1]] })
-    @replaceState events: events
+    @replaceState events: events 
 
   updateEvent: (event, data) ->
     index = @state.events.indexOf event

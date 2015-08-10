@@ -8,12 +8,13 @@
   
   handleDelete: (e) ->
     e.preventDefault()
-    $.ajax
-      method: 'DELETE'
-      url: "/events/#{ @props.event.id }"
-      dataType: 'JSON'
-      success: () =>
-        @props.handleDeleteEvent @props.event
+    if confirm "Are you sure?"
+      $.ajax
+        method: 'DELETE'
+        url: "/events/#{ @props.event.id }"
+        dataType: 'JSON'
+        success: () =>
+          @props.handleDeleteEvent @props.event
 
   handleEdit: (e) ->
     e.preventDefault()
