@@ -36,7 +36,8 @@
         className: 'form-group'
         React.DOM.input
           type: 'text'
-          className: 'form-control'
+          dateFormat: 'YYYY-MM-DD'
+          className: 'datepicker__input form-control'  
           placeholder: 'Date'
           name: 'date'
           value: @state.date

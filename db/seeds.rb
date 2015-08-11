@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+places = ["Prague", "Ostrava", "Brno", "Berlin", "Paris", "Amsterdam", "Barcelona"]
+
+titles = ["Ruby", "PHP", "JS", "Python", "Java", "Android", "IOS"]
+
+(1..6).each do |e|
+	Event.create(title: "#{titles[e]}", place: "#{places[e]}", description: "Some description", date: DateTime.now + e )
+end
