@@ -14,7 +14,7 @@
 
   handleSubmit: (e) ->
     e.preventDefault()
-    $.post '', { event: @state }, (data) =>
+    $.post '/events', { event: @state }, (data) =>
       @props.handleNewEvent data
       @setState @getInitialState()
     , 'JSON'
